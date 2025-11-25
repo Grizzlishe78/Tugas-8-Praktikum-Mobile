@@ -4,6 +4,17 @@ NIM : H1D023104 <br>
 Shift Lama : G <br>
 Shift Baru : D <br>
 
+# Tugas 7 Pertemuan 9
+
+Screenshoot Aplikasi <br>
+
+![Demo](assets/images/Login.png)
+![Demo](assets/images/Registrasi.png)
+![Demo](assets/images/List.png)
+![Demo](assets/images/Detail.png)
+![Demo](assets/images/Add.png)
+![Demo](assets/images/Edit.png)
+
 1. main.dart
 
 File utama aplikasi yang pertama kali dijalankan.
