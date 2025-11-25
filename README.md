@@ -1,17 +1,126 @@
-# tokokita
+Data Diri
+Nama : Simon Dimas Pramudya
+NIM : H1D023104
+Shift Lama : G
+Shift Baru : D
 
-A new Flutter project.
+1. main.dart
 
-## Getting Started
+File utama aplikasi yang pertama kali dijalankan.
 
-This project is a starting point for a Flutter application.
+Berisi:
 
-A few resources to get you started if this is your first Flutter project:
+Inisialisasi aplikasi Flutter (runApp)
+Konfigurasi MaterialApp
+Menentukan halaman awal aplikasi melalui home:
+Routing dasar sesuai modul, contoh:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- RegistrasiPage()
+- LoginPage()
+- ProdukPage()
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# Tugas-8-Praktikum-Mobile
+Fungsinya sebagai pusat konfigurasi awal aplikasi.
+
+Folder model/
+
+Folder ini berisi class–class model yang digunakan untuk menampung data dari API/Backend (JSON → Dart Object).
+
+2. model/login.dart
+
+Model data untuk response login.
+
+Field umum:
+
+- code
+- status
+- token
+- userID
+- userEmail
+
+Disertai:
+
+Login.fromJson() → mempermudah parsing JSON dari API.
+
+3. model/produk.dart
+
+Model data untuk entitas produk.
+Memuat field:
+
+- id
+- kodeProduk
+- namaProduk
+- hargaProduk
+
+Digunakan untuk mengirim atau menerima data produk di aplikasi.
+Folder ui/
+Berisi seluruh halaman (screens) aplikasi.
+
+4. ui/login_page.dart
+
+Halaman login untuk pengguna.
+Fitur:
+
+- Input username/email dan password
+- Validasi input
+- Menyimpan username ke SharedPreferences
+- Navigasi ke halaman produk setelah login berhasil
+- Tombol menuju halaman registrasi
+- Fungsinya sebagai gerbang autentikasi user.
+
+5. ui/registrasi_page.dart
+
+Halaman pendaftaran akun baru.
+Memuat:
+
+Form:
+
+- Nama
+- Email
+- Password
+- Konfirmasi password
+
+Validasi:
+
+- Input wajib diisi
+- Password harus sama
+- Tombol “Daftar” untuk simpan atau kirim ke API
+- Navigasi otomatis ke halaman login
+- Fungsinya untuk membuat akun sebelum user melakukan login.
+
+6. ui/produk_page.dart
+
+Halaman beranda setelah login, menampilkan daftar produk.
+
+Berisi:
+
+- AppBar dengan tombol tambah produk
+- Drawer dengan tombol Logout (hapus session dari SharedPreferences)
+- List produk dalam bentuk card atau tile
+- Navigasi ke halaman detail produk ketika item dipilih
+- Fungsinya sebagai pusat aktivitas utama pengguna.
+
+7. ui/produk_form.dart
+
+Halaman untuk menambahkan produk baru.
+
+Memuat:
+
+Input:
+
+- Kode produk
+- Nama produk
+- Harga produk
+- Tombol “Simpan”
+
+Menghasilkan objek Produk baru lalu kembali ke halaman produk
+Digunakan untuk operasi Create pada fitur CRUD Produk.
+
+8. ui/produk_detail.dart
+
+Halaman untuk menampilkan detail produk.
+
+Berisi:
+
+- Informasi lengkap produk (nama, harga, kode, id)
+- Tombol Edit atau Hapus (opsional, sesuai modul)
+- Fungsinya sebagai detail view dari setiap item produk.
