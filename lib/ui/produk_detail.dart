@@ -19,7 +19,7 @@ class _ProdukDetailState extends State<ProdukDetail> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Detail Produk Fathan',
+          'Detail Produk Simon',
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.blue,
