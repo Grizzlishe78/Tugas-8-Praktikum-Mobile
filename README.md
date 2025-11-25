@@ -1,8 +1,8 @@
-Data Diri
-Nama : Simon Dimas Pramudya
-NIM : H1D023104
-Shift Lama : G
-Shift Baru : D
+Data Diri <br>
+Nama : Simon Dimas Pramudya <br>
+NIM : H1D023104 <br>
+Shift Lama : G <br>
+Shift Baru : D <br>
 
 1. main.dart
 
